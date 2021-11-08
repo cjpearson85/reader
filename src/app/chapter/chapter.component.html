@@ -1,0 +1,7 @@
+<a class="button back" routerLink="/books/{{ bookId }}" [state]="{ data: { book, bookId }}">Back</a>
+<div class="chapter">
+  <p><span class="title">{{ book.title }}</span> <span class="author">{{ book.author }}</span></p>
+  <h2 class="chapter-title">{{ chapter.title }}</h2>
+  <p *ngFor="let paragraph of chapter.paragraphs">{{ paragraph }}</p>
+  <a class="button next" routerLink="/books/{{ bookId }}/chapters/{{ nextChapterIndex }}" [state]="{ data: { book, bookId, chapterId: nextChapterIndex }}">Next</a>
+</div>
