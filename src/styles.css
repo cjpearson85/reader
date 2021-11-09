@@ -111,8 +111,8 @@ body, html {
 }
 
 .back, .next {
-    background: url('back.svg') center center #ff2c4b;
-    background-size: 80px 80px;
+    background: url('./assets/icons8-back-48.png') center center #ff2c4b;
+    background-size: 60px 60px;
     border-radius: 100%;
     height: 80px;
     left: 20px;
@@ -124,18 +124,19 @@ body, html {
 }
 
 .next {
-    background: url('next.svg') center center #ff2c4b;
+    background: url('./assets/icons8-forward-48.png') center center #ff2c4b;
+    background-size: 60px 60px;
     left: auto;
     right: 20px;   
 }
 
 .back:hover {
-    background: url('back.svg') center center #cc2344;
+    background: url('./assets/icons8-back-48.png') center center #cc2344;
     background-size: 80px 80px;
 }
 
 .next:hover {
-    background: url('next.svg') center center #cc2344;
+    background: url('./assets/icons8-forward-48.png') center center #cc2344;
     background-size: 80px 80px;
 }
 
