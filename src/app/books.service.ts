@@ -8,4 +8,8 @@ export class BooksService {
   getBooks(): Book[] {
     return data;
   }
+
+  getBook(bookId: number): Book {
+    return data[bookId];
+  }
 }
