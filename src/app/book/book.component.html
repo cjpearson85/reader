@@ -1,6 +1,6 @@
 <a class="button back" routerLink="/books">Back</a>
 
-<div class="book-detail">
+<div class="book-detail" *ngIf="book">
   <img [src]="book.cover">
   <h3 class="title">{{ book.title }}</h3>
   <p class="author">{{ book.author }}</p>

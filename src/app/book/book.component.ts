@@ -11,7 +11,7 @@ import { BooksService } from '../books.service';
   providers: [BooksService],
 })
 export class BookComponent {
-  book: Book;
+  book: Book | undefined;
   bookId: number;
 
   constructor(
@@ -19,6 +19,8 @@ export class BookComponent {
     private route: ActivatedRoute
   ) {
     this.bookId = parseInt(this.route.snapshot.paramMap.get('bookId')!, 10);
-    this.book = this.booksService.getBook(this.bookId);
+    this.booksService
+      .getBook(this.bookId)
+      .subscribe((book) => (this.book = book));
   }
 }

@@ -12,7 +12,7 @@ import { BooksService } from '../books.service';
 export class BookshelfComponent {
   books: Book[] = [];
 
-  constructor(booksService: BooksService) {
-    this.books = booksService.getBooks();
+  constructor(private booksService: BooksService) {
+    this.booksService.getBooks().subscribe((books) => (this.books = books));
   }
 }
